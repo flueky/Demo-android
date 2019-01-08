@@ -24,7 +24,7 @@
 
 使用`git clone --branch [tags|branches] [git地址]`命令导出代码。
 
-如：`git clone --branch ndk-cmake git@github.com:flueky/Demo.git`
+如：`git clone --branch ndk-cmake https://github.com/flueky/Demo.git`
 
 
 
