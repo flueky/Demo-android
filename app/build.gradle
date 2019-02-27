@@ -1,5 +1,19 @@
 apply plugin: 'com.android.application'
 android {
+    signingConfigs {
+        release {
+            keyAlias 'flueky'
+            keyPassword 'android'
+            storeFile file('../demo.keystore')
+            storePassword 'android'
+        }
+        debug {
+            keyAlias 'flueky'
+            keyPassword 'android'
+            storeFile file('../demo.keystore')
+            storePassword 'android'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.flueky.demo"
@@ -10,6 +24,24 @@ android {
         versionNameSuffix '-test'
     }
     productFlavors {
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebuggable true
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+        release {
+            debuggable false
+            jniDebuggable false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            renderscriptDebuggable false
+            renderscriptOptimLevel 3
+            minifyEnabled true
+            pseudoLocalesEnabled true
+        }
     }
 }
 
