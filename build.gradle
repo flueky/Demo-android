@@ -18,6 +18,21 @@ buildscript {
 // 全部工程配置，作用于每个 Module
 allprojects {
     repositories {
+
+        // 本地仓库
+        mavenLocal()
+        // 本地服务器
+        maven {
+            credentials {
+                username "flueky"
+                password "123456"
+            }
+            url 'http://127.0.0.1:9000/repository/android/'
+        }
+        // 工程目录仓库
+        maven { url 'file://' + rootDir.getAbsolutePath() + '/repository/' }
+
+
         //  仓库地址
         google()
         jcenter()
