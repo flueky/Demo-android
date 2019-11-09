@@ -23,4 +23,17 @@ git clone --branch v0.3.0 https://github.com/flueky/Demo.git
 |v0.3.0|集成 maven 依赖|
 
 
+* 注：**示例中使用配置的签名文件信息使用配置文件的方式，未保证签名文件的安全，未上传。需要换成自己的签名文件使用。**
+
+`keystore.properties`文件内容如下：
+
+```properties
+keyAlias=androidde
+keyPassword=android
+storeFile=../demo.keystore
+storePassword=android
+```
+
+
+
 
