@@ -28,7 +28,7 @@ git clone --branch v0.3.0 https://github.com/flueky/Demo.git
 `keystore.properties`文件内容如下：
 
 ```properties
-keyAlias=androidde
+keyAlias=android
 keyPassword=android
 storeFile=../demo.keystore
 storePassword=android
