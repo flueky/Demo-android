@@ -198,7 +198,7 @@ android.applicationVariants.all { variant -> // 此变量可不写
 
 
     outputs.all { output ->
-//            outputFileName = new File("11.apk")
+            outputFileName = new File("11.apk")
 
 
 //        println outputFileName
