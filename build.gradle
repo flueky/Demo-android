@@ -11,7 +11,7 @@ buildscript {
 //    工程的依赖配置
     dependencies {
         // 必须包含的 gradle 版本的构建工具。
-        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.android.tools.build:gradle:4.0.0'
     }
 }
 

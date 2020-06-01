@@ -7,7 +7,7 @@ Android 空工程示例，对比从 AndroidStudio 创建工程，少去很多依
 如：
 
 ```shel
-git clone --branch v0.3.0 https://github.com/flueky/Demo.git
+git clone --branch v0.3.0 https://github.com/flueky/Demo-android.git
 ```
 
 ## 版本说明
