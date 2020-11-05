@@ -10,3 +10,4 @@ build
 .externalNativeBuild
 keystore.properties
 demo.keystore
+repository

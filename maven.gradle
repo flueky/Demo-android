@@ -37,5 +37,12 @@ uploadArchives {
 //        pom.groupId = "com.flueky"// 唯一标识（通常为模块包名，也可以任意）
 //        pom.artifactId = "maven-test" // 项目名称（通常为类库模块名称，也可以任意）
 //        pom.version = "1.0.0" // 版本号
+        pom.whenConfigured { pom ->
+            // 生成 pom 文件时，如依赖的库中，没有指定版本，则忽略配置
+            // 常见对 module 库的依赖。不过module 库中，指名 version 属性，会生效
+            pom.dependencies = pom.dependencies.findAll { dep ->
+                dep.version != "unspecified"
+            }
+        }
     }
 }
