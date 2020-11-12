@@ -76,3 +76,16 @@ ext {
             versionName: '1.0.0'
     ]
 }
+
+def outputAAR(android){
+    android.libraryVariants.all { variant ->
+        outputs.all { output ->
+            def name = outputFileName
+            if (variant.buildType.name == "debug") {
+                outputFileName = new File(name.replace("debug",android.defaultConfig.versionName+"-beta"))
+            }else{
+                outputFileName =  new File(name.replace("release",android.defaultConfig.versionName))
+            }
+        }
+    }
+}
