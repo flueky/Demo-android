@@ -1,0 +1,44 @@
+[
+  {
+    "level": "INFO",
+    "message": "Neither codeName nor minSdkVersion specified. Using minimum platform version for \u0027x86_64\u0027.",
+    "file": "G:\\project-code\\flueky\\android\\Demo\\jni\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64"
+  },
+  {
+    "level": "INFO",
+    "message": "Start JSON generation. Platform version: 16 min SDK version: x86_64",
+    "file": "G:\\project-code\\flueky\\android\\Demo\\jni\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64"
+  },
+  {
+    "level": "INFO",
+    "message": "No CMake version was specified in build.gradle. Using default version 3.10.2.",
+    "file": "G:\\project-code\\flueky\\android\\Demo\\jni\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64"
+  },
+  {
+    "level": "INFO",
+    "message": "Trying to locate CMake in local SDK repository.",
+    "file": "G:\\project-code\\flueky\\android\\Demo\\jni\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64"
+  },
+  {
+    "level": "INFO",
+    "message": "- CMake found in SDK at \u0027G:\\android-sdk\\cmake\\3.10.2.4988404\u0027 had version \u00273.10.2\u0027",
+    "file": "G:\\project-code\\flueky\\android\\Demo\\jni\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64"
+  },
+  {
+    "level": "INFO",
+    "message": "JSON \u0027G:\\project-code\\flueky\\android\\Demo\\jni\\.cxx\\cmake\\debug\\x86_64\\android_gradle_build.json\u0027 was up-to-date",
+    "file": "G:\\project-code\\flueky\\android\\Demo\\jni\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64"
+  },
+  {
+    "level": "INFO",
+    "message": "JSON generation completed without problems",
+    "file": "G:\\project-code\\flueky\\android\\Demo\\jni\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64"
+  }
+]

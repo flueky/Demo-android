@@ -1,0 +1,43 @@
+{
+  "stringTable": {
+    "0": "G:/project-code/flueky/android/Demo/jni/.cxx/cmake/debug/x86",
+    "1": "--target=i686-none-linux-android16 --gcc-toolchain=G:/android-sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=G:/android-sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dhello_jni_EXPORTS -IG:/project-code/flueky/android/Demo/jni/src/main/cpp/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC"
+  },
+  "buildFiles": [
+    "G:\\android-sdk\\ndk\\19.2.5345600\\build\\cmake\\platforms.cmake",
+    "G:\\android-sdk\\ndk\\19.2.5345600\\build\\cmake\\android.toolchain.cmake",
+    "G:\\project-code\\flueky\\android\\Demo\\jni\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "G:\\android-sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"G:\\project-code\\flueky\\android\\Demo\\jni\\.cxx\\cmake\\debug\\x86\" clean"
+  ],
+  "buildTargetsCommand": "G:\\android-sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"G:\\project-code\\flueky\\android\\Demo\\jni\\.cxx\\cmake\\debug\\x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "hello-jni-Debug-x86": {
+      "buildCommand": "G:\\android-sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"G:\\project-code\\flueky\\android\\Demo\\jni\\.cxx\\cmake\\debug\\x86\" hello-jni",
+      "buildType": "debug",
+      "toolchain": "1265921228",
+      "abi": "x86",
+      "artifactName": "hello-jni",
+      "files": [
+        {
+          "src": "G:\\project-code\\flueky\\android\\Demo\\jni\\src\\main\\cpp\\hello-jni.c",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "G:\\project-code\\flueky\\android\\Demo\\jni\\build\\intermediates\\cmake\\debug\\obj\\x86\\libhello-jni.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "1265921228": {
+      "cCompilerExecutable": "G:\\android-sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

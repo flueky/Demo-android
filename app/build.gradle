@@ -235,7 +235,8 @@ dependencies {
 //    // 如果 需要组合使用，如 devMinApi21DebugImplementation，见 configurations
 //
 //    // 依赖本地 module
-//    implementation project(':library')
+    implementation project(':lib')
+    implementation project(':jni')
 //    implementation project(':other-lib')
 //    // 等同于带 path 参数
 ////    implementation project(path: ':library')
