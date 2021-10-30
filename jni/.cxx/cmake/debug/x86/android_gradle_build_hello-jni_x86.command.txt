@@ -1,7 +1,0 @@
-Executable : G:\android-sdk\cmake\3.10.2.4988404\bin\ninja.exe
-arguments : 
--C
-G:\project-code\flueky\android\Demo\jni\.cxx\cmake\debug\x86
-hello-jni
-jvmArgs : 
-
