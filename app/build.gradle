@@ -232,6 +232,7 @@ dependencies {
     // 依赖同级的 libs 目录，包含 jar 和 aar，还可以选择不包含指定文件
     implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'], exclude: [])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.annotation:annotation:1.2.0'
 //    // debug  类型的依赖
 //    debugImplementation fileTree(include: '*.jar', dir: 'src/debug/libs')
 //    // release  类型的依赖
