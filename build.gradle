@@ -1,82 +1,20 @@
+plugins {
+    id 'com.android.application' version '7.2.0' apply false
+    id 'com.android.library' version '7.2.0' apply false
+    id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
+}
 // 加载其他的 gradle 配置文件，可选
 apply from: "config.gradle"
-
-buildscript {
-
-    ext.kotlin_version = "1.5.10"
-
-    repositories {
-        maven { url 'https://maven.aliyun.com/repository/central' }
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repository/google' }
-
-        //  仓库地址
-//        google()
-        //  google() 对低版本插件不兼容，使用下面的配置
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
-        jcenter()
-        mavenCentral()
-    }
-//    工程的依赖配置
-    dependencies {
-        // 必须包含的 gradle 版本的构建工具。
-        classpath "com.android.tools.build:gradle:4.2.2"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
-
-// 全部工程配置，作用于每个 Module
-allprojects {
-    repositories {
-
-//        // 本地仓库
-//        mavenLocal()
-//        // 本地服务器
-//        maven {
-//            credentials {
-//                username "flueky"
-//                password "123456"
-//            }
-//            url 'http://127.0.0.1:9000/repository/android/'
-//        }
-//        // 工程目录仓库
-//        maven { url 'file://' + rootDir.getAbsolutePath() + '/repository/' }
-
-
-        maven { url 'https://maven.aliyun.com/repository/central' }
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repository/google' }
-
-        //  仓库地址
-//        google()
-        //  google() 对低版本插件不兼容，使用下面的配置
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
-        jcenter()
-        mavenCentral()
-
-        // 依赖仓库，添加用于查找依赖项的目录，可以多个。
-        flatDir {
-            // jar、aar 存放的目录
-            dirs 'libs'
-        }
-    }
-}
 
 // 扩展变量，用于统一管理每个 Module 的有关配置
 ext {
     // 应用 id
     applicationId = "com.flueky.demo"
     // 统一控制各个 Module 使用的 SDK 版本
-    compileSdkVersion = 29
+    compileSdkVersion = 32
 //    buildToolsVersion = "29.0.0"
-    minSdkVersion = 19
-    targetSdkVersion = 29
+    minSdkVersion = 21
+    targetSdkVersion = 32
 
     // 定义 Module 的版本号
     app = [
