@@ -69,13 +69,15 @@ android {
 //            // 应用 Id 后缀
 //            applicationIdSuffix '.debug'
         }
+        dev {
+        }
         // 发行版本
         release {
             // 禁止 Java 代码调试（默认禁止）
             debuggable false
             // 禁止 JNI 代码调试 （默认禁止）
             jniDebuggable false
-            signingConfig signingConfigs.release
+//            signingConfig signingConfigs.release
             // build/intermediates/proguard-files 目录下存在三个混淆配置文件
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
             // 允许代码压缩、混淆、优化,默认情况下会使用 R8 压缩
@@ -87,7 +89,7 @@ android {
             // 或者使用下面的配置，语法同 proguard file
 //            multiDexKeepProguard file('multidex-config.pro')
         }
-//        // 内部使用版本
+        //        // 内部使用版本
 //        inner {
 //            // 使用 debug 的配置
 //            initWith debug
@@ -194,9 +196,9 @@ android.applicationVariants.all { variant -> // 此变量可不写
 
 //        println buildType.name + "  " + flavorName + " " + versionName + " " + versionCode
 
-
+//    variant.packageApplication.outputDirectory = new File("${projectDir}", "output/" + flavorName + "/" + buildType.name)
     packageApplicationProvider.configure {
-//        outputDirectory = new File("${projectDir}", "output/" + flavorName + "/" + buildType.name)
+        outputDirectory = new File("${projectDir}", "output/" + flavorName + "/" + buildType.name)
     }
 
 
@@ -241,6 +243,7 @@ dependencies {
 //    // 依赖本地 module
     implementation project(':lib')
     implementation project(':jni')
+    implementation 'com.android.tools.build:gradle:7.3.0'
 //    implementation project(':other-lib')
 //    // 等同于带 path 参数
 ////    implementation project(path: ':library')

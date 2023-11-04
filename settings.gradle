@@ -1,9 +1,9 @@
 pluginManagement {
     repositories {
         gradlePluginPortal()
-        maven { url 'https://maven.aliyun.com/repository/central' }
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repository/google' }
+//        maven { url 'https://maven.aliyun.com/repository/central' }
+//        maven { url 'https://maven.aliyun.com/repository/public' }
+//        maven { url 'https://maven.aliyun.com/repository/google' }
 
         //  仓库地址
         google()
@@ -33,9 +33,9 @@ dependencyResolutionManagement {
 //        maven { url 'file://' + rootDir.getAbsolutePath() + '/repository/' }
 
 
-        maven { url 'https://maven.aliyun.com/repository/central' }
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repository/google' }
+//        maven { url 'https://maven.aliyun.com/repository/central' }
+//        maven { url 'https://maven.aliyun.com/repository/public' }
+//        maven { url 'https://maven.aliyun.com/repository/google' }
 
         //  仓库地址
         google()

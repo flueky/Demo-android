@@ -8,4 +8,8 @@ android{
             path "src/main/cpp/CMakeLists.txt"
         }
     }
+    buildTypes {
+        dev {
+        }
+    }
 }
