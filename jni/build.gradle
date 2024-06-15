@@ -1,11 +1,13 @@
 apply plugin: 'com.android.library'
 
 android{
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    namespace  "com.flueky.android.jni"
+    compileSdk rootProject.ext.compileSdkVersion
     externalNativeBuild {
         cmake {
             // 指定CMake编译配置文件路径
-            path "src/main/cpp/CMakeLists.txt"
+            path = file("src/main/cpp/CMakeLists.txt")
+            version = "3.22.1"
         }
     }
     buildTypes {

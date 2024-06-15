@@ -1,5 +1,7 @@
-apply plugin: 'com.android.application'
-apply plugin: 'org.jetbrains.kotlin.android'
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+}
 //apply plugin: 'kotlin-kapt'
 
 
@@ -9,17 +11,18 @@ ksProp.load(new FileInputStream(ksPropFile))
 
 android {
 
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    namespace  "com.flueky.demo"
+    compileSdk rootProject.ext.compileSdkVersion
 //    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         // 应用 id
         applicationId rootProject.ext.applicationId
         // 最小 sdk 版本，低于此 Android 版本的手机不能安装
-        minSdkVersion rootProject.ext.minSdkVersion
+        minSdk rootProject.ext.minSdkVersion
         // 目标 sdk 版本，低于此 Android 版本的手机完美兼容，高于此 Android 版本的手机，部分特性不能使用
         // 升级 target 需要针对高版本做兼容。
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
         // 应用版本号，覆盖安装时，升级版本依据
         versionCode rootProject.ext.app.versionCode
         // 版本名称，
@@ -56,6 +59,13 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 
     buildTypes {
         // 测试版本
@@ -163,7 +173,6 @@ android {
 ////            compatibleScreens 'small', 'normal', 'large', 'xlarge'
 //        }
 //    }
-
 }
 
 //import com.android.build.OutputFile
@@ -197,17 +206,23 @@ android.applicationVariants.all { variant -> // 此变量可不写
 //        println buildType.name + "  " + flavorName + " " + versionName + " " + versionCode
 
 //    variant.packageApplication.outputDirectory = new File("${projectDir}", "output/" + flavorName + "/" + buildType.name)
-    packageApplicationProvider.configure {
-        outputDirectory = new File("${projectDir}", "output/" + flavorName + "/" + buildType.name)
-    }
+//    packageApplicationProvider.configure {
+//        outputDirectory = new File("${projectDir}", "output/" + flavorName + "/" + buildType.name)
+//    }
+//    variant.packageApplication.doLast {
+//        copy {
+//            from variant.outputs.getAt(0).outputFile
+//            into file("${projectDir}"+"/output/" + flavorName + "/" + buildType.name)
+//        }
+//    }
 
-
-    outputs.all { output ->
-            outputFileName = new File("11.apk")
-
-
+    variant.outputs.all { output ->
+//        println("1234 ${output.outputFileName}")
+        outputFileName = "11.apk"
 //        println outputFileName
 //            println outputFile
+//        def custom_directory = new File("${projectDir}", "output/" + flavorName + "/" + buildType.name)
+//        outputFile = new File(custom_directory,outputFileName)
     }
 
 
@@ -232,7 +247,11 @@ dependencies {
 //    implementation fileTree(include: '*.jar', dir: 'libs')
     // 依赖同级的 libs 目录，包含 jar 和 aar，还可以选择不包含指定文件
     implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'], exclude: [])
-    implementation 'androidx.annotation:annotation:1.2.0'
+    implementation("androidx.core:core-ktx:1.9.0")
+//    implementation("androidx.appcompat:appcompat:1.6.1")
+//    implementation("com.google.android.material:material:1.8.0")
+//    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+//    implementation 'androidx.annotation:annotation:1.8.0'
 //    // debug  类型的依赖
 //    debugImplementation fileTree(include: '*.jar', dir: 'src/debug/libs')
 //    // release  类型的依赖
@@ -243,7 +262,7 @@ dependencies {
 //    // 依赖本地 module
     implementation project(':lib')
     implementation project(':jni')
-    implementation 'com.android.tools.build:gradle:7.3.0'
+//    implementation 'com.android.tools.build:gradle:8.4.0'
 //    implementation project(':other-lib')
 //    // 等同于带 path 参数
 ////    implementation project(path: ':library')
