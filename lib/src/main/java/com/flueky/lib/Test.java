@@ -1,8 +1,11 @@
 package com.flueky.lib;
 
 public class Test {
-    static {
+    static{
+        System.loadLibrary("bar");
+//        System.loadLibrary("foo");
         System.loadLibrary("hello-jni");
+//        System.loadLibrary("baz");
     }
 
     public static final void test() {
